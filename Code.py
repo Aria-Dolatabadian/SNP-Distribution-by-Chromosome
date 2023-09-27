@@ -56,7 +56,7 @@ for i in range(10):
     ax = axs[i//5, i%5]
     data = df[df['chromosome']==i+1]
     data = data.sort_values('start')
-    ax.stackplot(data['start'], data['number'], colors=colors[i])
+    ax.stackplot(data['start'], data['number'], color=colors[i])
     ax.set_title('Chromosome {}'.format(i+1))
     ax.set_xlabel('Position')
     ax.set_ylabel('Number of SNPs')
